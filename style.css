@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+main {
+    height: auto;
+    width: 100%;
+}
+
+.container {
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+}
+
+/* Cabeçalho */
+
+header {
+    height: 10vh;
+    position: absolute;
+    top: 2vh;
+    width: 100%;
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuHamb {
+    order: 1;
+    padding-left: 2.5vw;
+}
+
+.hamb {
+    background-color: #A65D03;
+    height: 0.8vh;
+    margin: 0.6vh 0;   
+    min-width: 45px;
+}
+
+nav {
+    color: #592202;
+    margin-left: 5vh;
+    order: 0;
+    text-align: right;
+    width: auto;
+}
+
+ul {
+    display: flex;
+    gap: 1.65vw;
+    justify-content: space-between;
+    list-style: none;
+}
+
+ul li {
+    font-size: 20px;
+}
+
+/* Conteúdo Imagem Hero Section */
+
+.containerImg1, .containerImg2, .containerImg3 {
+    height: 100vh;
+    width: 100%;
+}
+
+.containerImg1 {
+    background-image: url('mockup1.jpg');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 55%;
+}
+
+.containerImg2 {
+    background-image: url('mockup2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containerImg3 {
+    background-image: url('mockup3.jpg');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 55%;
+}
+
+/* Conteúdo Textual Hero Section */
+
+.content1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 30vw;
+}
+
+.content2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.content2 p {
+    color: #592202;
+    font-size: 6vw;
+    font-weight: 300;
+    line-height: 1;
+    margin-top: 2rem;
+}
+
+.content2 input {
+    background-color: #a65d0386;
+    border-radius: 25px;
+    border: 0.1vw solid #592202; 
+    font-size: 2vw;
+    height: 7.5vh;
+    margin: 5vh 0;
+    text-align: center;
+    width: 60vw;
+}
+
+input::placeholder {
+    color: #d1d1d1;
+}
+
+.content3 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 30vw;
+}
+
+.content3 p{
+    text-align: right;
+}
+
+.flexItem3 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+span {
+    color: #592202;  
+    display: inline-block;
+    font-size: 25rem;
+    font-weight: 100;
+    height: 50vh;
+    line-height: 1;
+}
+
+p {
+    color: #A65D03;
+    font-size: 104px;
+    font-weight: 300;
+    line-height: 1;
+    padding: 0 2rem;
+}
+
+/* dispositivos móveis. */
+
+@media only screen and (max-width: 1210px){
+    .container {
+        height: 100vh;
+        position: relative;
+        width: 100%;
+    }
+    
+    .containerImg1 {
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .containerImg2 {
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .containerImg3 {
+        background-position: center;
+        background-size: cover;
+    }
+    
+    /* Cabeçalho */
+    
+    .menuHamb {
+        order: 0;
+    }
+
+    .hamb {
+        background-color: #D98D30; 
+        min-width: 7vw;
+    }
+    
+    nav {
+        visibility: hidden;
+    }
+    
+    /* Conteúdo Textual Hero Section */
+    
+    .content1 {
+        width: 100%;
+        padding: 0 0;
+        justify-content: center;
+    }
+    
+    .content2 p {
+        color: #D98D30;
+        font-size: 5rem;
+        font-weight: 300;
+        line-height: 1;
+        text-align: center;
+        text-shadow: 2px 3px 5px #592202;
+    }
+        
+    .content2 input {
+        background-color: #59220271;
+        border-radius: 25px;
+        border: 0.5vw solid #592202; 
+        font-size: 5vw;
+        height: 7.5vh;
+        margin: 5vh 0;
+        text-align: center;
+        width: 80%;
+    }
+    
+    .content3 {
+        width: 100%;
+        padding: 0 3rem;
+        color: #160D00;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        height: 100vh;
+        justify-content: center;
+        text-shadow: #592202;
+        align-items: flex-start;
+    }    
+
+    .content3 p{
+        text-align: left;
+    }    
+
+    span {
+        color: #592202;
+        font-size: 25rem;
+    }
+
+    p {
+        color: #D98D30;
+        font-size: 6.5rem;
+        line-height: 100%;
+        text-shadow: 2px 3px 5px #592202;
+    } 
+    
+}
